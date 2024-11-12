@@ -2,7 +2,7 @@ name: DockerImage
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop ] 
   pull_request:
     branches: [ develop ]
   repository_dispatch:
