@@ -2,7 +2,7 @@ name: Modelops deploy test
 
 on:
   push:
-    branches: [ main ] 
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -13,7 +13,7 @@ jobs:
     container: adsoft/aiops:latest
 
     steps:
-    - uses: actions/checkout@v2 
+    - uses: actions/checkout@v2
     - name: hello-world
       run: echo "hello world workflows …"
     - name: show python version 
@@ -42,6 +42,3 @@ jobs:
   
     - name: Docker Push 
       run: docker push ${{secrets.DOCKER_USER}}/tensorflow-${{secrets.MODEL_NAME}}:${{ github.sha }}
-
-
-
